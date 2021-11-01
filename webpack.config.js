@@ -61,10 +61,6 @@ module.exports = {
         new CopyFilePlugin({
             patterns: [
                 {
-                    from: `${__dirname}/app/services/favicon.ico`,
-                    to: `${__dirname}/dist/assets`,
-                    context: `${__dirname}`,
-                },{
                     from: `${__dirname}/app/services/tangkeke.mp3`,
                     to: `${__dirname}/dist/assets`,
                     context: `${__dirname}`
