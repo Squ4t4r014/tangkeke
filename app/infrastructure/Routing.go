@@ -2,7 +2,6 @@ package infrastructure
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/thinkerou/favicon"
 	"net/http"
 	"os"
 )
@@ -24,7 +23,7 @@ func NewRouting() *Routing {
 }
 
 func (r *Routing) loadTemplates() {
-	r.Gin.Use(favicon.New("./dist/assets/favicon.ico"))
+	//r.Gin.Use(favicon.New("./dist/assets/favicon.ico"))
 	r.Gin.Static("/assets", r.AbsolutePath + "/dist/assets")
 	r.Gin.LoadHTMLGlob(r.AbsolutePath + "/app/interfaces/presenters/*")
 }
