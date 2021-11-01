@@ -1,1 +1,1 @@
-web: bin/tangkeke
+web: bin/tang-keke
