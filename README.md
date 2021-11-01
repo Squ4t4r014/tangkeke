@@ -1,12 +1,9 @@
-[![Actions Status: CI](https://github.com/DaisenKudo/Zura-chanZura/workflows/CI/badge.svg?branch=dev)](https://github.com/DaisenKudo/Zura-chanZura/actions?query=workflow%3A"CI")
+[![Actions Status: CI](https://github.com/DaisenKudo/tangkeke/workflows/CI/badge.svg?branch=dev)](https://github.com/DaisenKudo/tangkeke/actions?query=workflow%3A"CI")
 
-# zura-chan-zura
-ずらちゃんずら💓をすばやくツイート
-Golang + Gin + Typescript + SCSSを使っています。Herokuへのデプロイも。
+# tangkeke
+あれ...あれ...
 
-ちなみに、テンプレートでもあります。
-
-## zura-chan-zuraについて
+## tangkekeについて
 このプログラムは「Honoka」を使用しています。
 Copyright (c) 2015 windyakin
 [https://raw.githubusercontent.com/windyakin/Honoka/master/LICENSE](https://raw.githubusercontent.com/windyakin/Honoka/master/LICENSE)
