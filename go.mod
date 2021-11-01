@@ -1,4 +1,4 @@
-module zura-chan-zura
+module tangkeke
 
 go 1.16
 
