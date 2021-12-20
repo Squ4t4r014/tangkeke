@@ -1,7 +1,7 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const CopyFilePlugin = require("copy-webpack-plugin")
 
-module.exports = {
+const index = {
     mode: "production",
     entry: "./app/services/bundle.ts",
     output: {
@@ -79,3 +79,67 @@ module.exports = {
         }),
     ]
 };
+
+const negative = {
+    mode: "production",
+    entry: "./app/services/negative.ts",
+    output: {
+        path: __dirname + "/dist/assets",
+        filename: "negative.js",
+    },
+    module: {
+        rules: [
+            {
+                test: /\.(css|scss)$/,
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                    },
+                    {
+                        loader: "css-loader",
+                        options: {
+                            url: true,
+                            sourceMap: false,
+                            importLoaders: 2,
+                        },
+                    },
+                    {
+                        loader: "sass-loader",
+                        options: {
+                            sourceMap: false,
+                        },
+                    },
+                ]
+            },
+            {
+                test: /\.ts$/,
+                loader: "ts-loader",
+            },
+            {
+                test: /\.(jpg|png)$/,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            name: "[name].[ext]",
+                            outputPath: "./",
+                            publicPath: "./"
+                        },
+                    },
+                ]
+            },
+        ],
+    },
+    resolve: {
+        extensions: [".ts", ".js"],
+    },
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: `style.css`
+        }),
+    ]
+};
+
+module.exports = [
+    index, negative
+];
