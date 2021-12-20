@@ -65,6 +65,16 @@ module.exports = {
                     to: `${__dirname}/dist/assets`,
                     context: `${__dirname}`
                 },
+                {
+                    from: `${__dirname}/app/services/negative1.mp3`,
+                    to: `${__dirname}/dist/assets`,
+                    context: `${__dirname}`
+                },
+                {
+                    from: `${__dirname}/app/services/study.mp3`,
+                    to: `${__dirname}/dist/assets`,
+                    context: `${__dirname}`
+                },
             ]
         }),
     ]

@@ -36,6 +36,14 @@ func (r *Routing) setRouting() {
 			"where" : "あれ？",
 		})
 	})
+	r.Gin.GET("/negative", func (c *gin.Context) {
+		c.HTML(http.StatusOK, "negative.html", gin.H {
+			"title" : "インキャ❗",
+			"text" : "陰キャですか❓",
+			"negative1" : "はい",
+			"negative2" : "いいえ",
+		})
+	})
 }
 
 func (r *Routing) Run() error {
