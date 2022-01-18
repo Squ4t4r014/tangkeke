@@ -76,7 +76,28 @@ const negative = {
     },
     module: {
         rules: [
-            
+            {
+                test: /\.(css|scss)$/,
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                    },
+                    {
+                        loader: "css-loader",
+                        options: {
+                            url: true,
+                            sourceMap: false,
+                            importLoaders: 2,
+                        },
+                    },
+                    {
+                        loader: "sass-loader",
+                        options: {
+                            sourceMap: false,
+                        },
+                    },
+                ]
+            },
             {
                 test: /\.ts$/,
                 loader: "ts-loader",
@@ -86,6 +107,11 @@ const negative = {
     resolve: {
         extensions: [".ts", ".js"],
     },
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: `style.css`
+        }),
+    ]
 };
 
 module.exports = [
