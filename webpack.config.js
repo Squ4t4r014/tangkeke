@@ -36,19 +36,6 @@ const index = {
                 test: /\.ts$/,
                 loader: "ts-loader",
             },
-            {
-                test: /\.(jpg|png)$/,
-                use: [
-                    {
-                        loader: "file-loader",
-                        options: {
-                            name: "[name].[ext]",
-                            outputPath: "./",
-                            publicPath: "./"
-                        },
-                    },
-                ]
-            },
         ],
     },
     resolve: {
@@ -60,11 +47,6 @@ const index = {
         }),
         new CopyFilePlugin({
             patterns: [
-                {
-                    from: `${__dirname}/app/resources/bg.png`,
-                    to: `${__dirname}/dist/assets`,
-                    context: `${__dirname}`
-                },
                 {
                     from: `${__dirname}/app/resources/tangkeke.mp3`,
                     to: `${__dirname}/dist/assets`,
@@ -94,55 +76,16 @@ const negative = {
     },
     module: {
         rules: [
-            {
-                test: /\.(css|scss)$/,
-                use: [
-                    {
-                        loader: MiniCssExtractPlugin.loader,
-                    },
-                    {
-                        loader: "css-loader",
-                        options: {
-                            url: true,
-                            sourceMap: false,
-                            importLoaders: 2,
-                        },
-                    },
-                    {
-                        loader: "sass-loader",
-                        options: {
-                            sourceMap: false,
-                        },
-                    },
-                ]
-            },
+            
             {
                 test: /\.ts$/,
                 loader: "ts-loader",
-            },
-            {
-                test: /\.(jpg|png)$/,
-                use: [
-                    {
-                        loader: "file-loader",
-                        options: {
-                            name: "[name].[ext]",
-                            outputPath: "./",
-                            publicPath: "./"
-                        },
-                    },
-                ]
             },
         ],
     },
     resolve: {
         extensions: [".ts", ".js"],
     },
-    plugins: [
-        new MiniCssExtractPlugin({
-            filename: `style.css`
-        }),
-    ]
 };
 
 module.exports = [
