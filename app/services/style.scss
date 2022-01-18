@@ -2,15 +2,6 @@ main {
     min-height: 100vh;
 }
 
-.hero-header {
-    position: relative;
-    height: 100vh;
-    background-image: url(../resources/bg.png);
-    background-position: left;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
 @mixin content {
     text-align: center;
 }
@@ -38,32 +29,4 @@ main {
     animation-delay: 0.5s;
     color: #FFF;
     @include content
-}
-
-img.twitter-icon {
-    content: "";
-    width: 17px;
-    height: 13px;
-    display: inline-block;
-    margin-top: 2px;
-    margin-right: 4px;
-    vertical-align: text-top;
-    background-position : center center;
-    background-repeat: no-repeat;
-}
-
-canvas {
-    position: fixed;
-    display: flex;
-    right: 0;
-    bottom: 0;
-    width: max-content;
-    height: 15vh;
-}
-
-#container-canvas {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    mix-blend-mode: overlay;
 }
