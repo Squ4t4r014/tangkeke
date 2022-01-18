@@ -36,6 +36,19 @@ const index = {
                 test: /\.ts$/,
                 loader: "ts-loader",
             },
+            {
+                test: /\.(jpg|png)$/,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            name: "[name].[ext]",
+                            outputPath: "./",
+                            publicPath: "./"
+                        },
+                    },
+                ]
+            },
         ],
     },
     resolve: {
@@ -101,6 +114,19 @@ const negative = {
             {
                 test: /\.ts$/,
                 loader: "ts-loader",
+            },
+            {
+                test: /\.(jpg|png)$/,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            name: "[name].[ext]",
+                            outputPath: "./",
+                            publicPath: "./"
+                        },
+                    },
+                ]
             },
         ],
     },
