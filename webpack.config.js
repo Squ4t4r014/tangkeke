@@ -61,17 +61,17 @@ const index = {
         new CopyFilePlugin({
             patterns: [
                 {
-                    from: `${__dirname}/app/services/tangkeke.mp3`,
+                    from: `${__dirname}/app/resources/tangkeke.mp3`,
                     to: `${__dirname}/dist/assets`,
                     context: `${__dirname}`
                 },
                 {
-                    from: `${__dirname}/app/services/negative1.mp3`,
+                    from: `${__dirname}/app/resources/negative1.mp3`,
                     to: `${__dirname}/dist/assets`,
                     context: `${__dirname}`
                 },
                 {
-                    from: `${__dirname}/app/services/study.mp3`,
+                    from: `${__dirname}/app/resources/study.mp3`,
                     to: `${__dirname}/dist/assets`,
                     context: `${__dirname}`
                 },
